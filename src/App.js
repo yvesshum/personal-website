@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+  
+import React, { Component } from 'react';
+import './App.module.css';
+import Header from './Components/Pages/Header';
+import Home from "./Components/Pages/Home"
+// import Footer from './Components/Footer';
+import About from './Components/Pages/About';
+import Resume from './Components/Pages/Resume';
+import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
+// import Contact from './Components/Contact';
+// import Testimonials from './Components/Testimonials';
+// import Portfolio from './Components/Portfolio';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render() {
+    return (  
+      <div className="App">
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans&display=swap');
+        </style>
+        <Header/>
+        <Home/>
+        <About/>
+        <Resume/>
+        
+
+        {/* <Portfolio data={this.state.resumeData.portfolio}/> */}
+        {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
+        {/* <Contact data={this.state.resumeData.main}/> */}
+        {/* <Footer data={this.state.resumeData.main}/> */}
+      </div>
+    );
+  }
 }
 
 export default App;

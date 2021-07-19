@@ -1,0 +1,24 @@
+.sans  {
+    font-family: "Noto Sans", sans-serif;;
+}
+
+.mono {
+    font-family: "Fira Code", monospace;
+}
+
+.white {
+    color: white
+}
+
+.grey {
+    color: #7a7a7a
+}
+
+.logo {
+    color: white;
+}
+
+.logo:hover {
+    color: dodgerblue;
+    cursor: pointer;
+}
