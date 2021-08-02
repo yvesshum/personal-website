@@ -20,6 +20,9 @@ class App extends Component {
         <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Noto+Sans&display=swap');
         </style>
+        <style>
+        @import "react-alice-carousel/lib/alice-carousel.css";
+        </style>
         <Header/>
         <Home/>
         <About/>

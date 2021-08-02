@@ -9,9 +9,18 @@ body {
     --color-neutral-100: white;
     --color-light-200: #8b8b8b;
     --color-green-400: #34a817;
-    --color-blue-200: #00c1d4;
+    --color-blue-200: #0ebfcf;
     font-family: "Noto Sans", sans-serif;
 
+    --color-cold-blue: #21094E;
+    --color-cold-purple: #511281;
+    --color-cold-teal: #4CA1A3;
+    --color-cold-green: #A5E1AD;
+
+    --color-dark-black: #222831;
+    --color-dark-space: #393E46;
+    --color-dark-yellow: #FFD369;
+    --color-dark-grey: #EEEEEE
 }
 
 .mono {
@@ -73,7 +82,7 @@ body {
     color: red;
 }
 
-@media only screen and (max-width: 624px) {
+@media only screen and (max-width: 1024px) {
     .split {
         display: block;
     }
@@ -89,4 +98,10 @@ body {
         width: 100%;
         text-align: center;
     }
+}
+
+
+.vertical-timeline.customline::before {
+    background: yellow;
+    background-color: var(--color-dark-yellow);
 }

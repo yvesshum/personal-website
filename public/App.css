@@ -1,0 +1,11 @@
+.vertical-timeline.customline::before {
+    background: var(--color-dark-yellow);
+}
+
+.vertical-timeline-element-icon:hover {
+    cursor: pointer;
+}
+
+.vertical-timeline-element-content:hover {
+    cursor: pointer;
+}

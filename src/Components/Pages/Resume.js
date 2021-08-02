@@ -1,146 +1,90 @@
 import React, { Component } from "react";
-import { Image } from "react-bootstrap";
-import { IoLogoPaypal } from "react-icons/io5";
+import { FormControl, Image, InputGroup } from "react-bootstrap";
 import { Element } from "react-scroll/modules";
 import ResumePoint from "../ResumePoint";
+import { IoLogoPaypal, IoBriefcase } from "react-icons/io5";
 
+import styles from "../../App.module.css";
+import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
 export default class Resume extends Component {
+    renderVerticalTimelineElement = (title, company, desc, date, icon) => (
+        <VerticalTimelineElement
+            onTimelineElementClick={() => window.open("https://www.linkedin.com/in/yves-shum/", "_blank")}
+            iconOnClick={() => window.open("https://www.linkedin.com/in/yves-shum/", "_blank")}
+            className="vertical-timeline-element--work"
+            contentStyle={{ background: "var(--color-dark-space)", color: "#fff" }}
+            contentArrowStyle={{ borderRight: "7px solid var(--color-dark-space)" }}
+            date={date}
+            iconStyle={{ background: "var(--color-dark-black)", color: "#fff", borderColor: "coral" }}
+            icon={icon}
+        >
+            <h3 className="vertical-timeline-element-title" style={{color: "var(--color-dark-yellow"}}>{title}</h3>
+            <h4 className="vertical-timeline-element-subtitle">{company}</h4>
+            <p>{desc}</p>
+        </VerticalTimelineElement>
+    );
+
     render() {
         return (
-            <div style={{ padding: `0 20%` }}>
+            <div style={{ padding: `0 15%`, backgroundColor: "#2b2b2b" }}>
                 <Element name="Resume" />
-                <ResumePoint
-                    category={"Education"}
-                    info={[
-                        {
-                            icon: <Image src={"uchicagocs.jpg"} style={{ height: "3rem" }} />,
-                            primary: "University of Chicago",
-                            title: "Masters in Computer Science",
-                            date: "Present, Expected June 2022",
-                            details: "",
-                        },
-                        {
-                            icon: <Image src={"uchicago.png"} style={{ height: "3rem" }} />,
-                            primary: "University of Chicago",
-                            title: "B.S. in Computer Science with Specialization in Computer Systems",
-                            date: "Sep 2018 - Jun 2021",
-                            details: (
-                                <div>
-                                    <p>Computer Science major that took too many systems classes 😅 </p>
-                                    <p>
-                                        15400 Intro to Computer Systems | 23200 Intro to Computer Security | 23320
-                                        Foundations of Computer Networks | 23360 Advanced Networks | 22200 Computer
-                                        Architecture | 23500 Intro to Database Systems | 23010 Parallel Computing |
-                                        22300 Functional Programming | 27100 Discrete Mathematics | 27200 Theory of
-                                        Algorithms | 28100 Intro to Complexity Theory
-                                    </p>
-                                </div>
-                            ),
-                        },
-                    ]}
-                />
-                <ResumePoint
-                    category={"Work"}
-                    info={[
-                        {
-                            primary: "PayPal",
-                            icon: <Image src={`paypal.jpg`} style={{ height: "3rem" }} />,
-                            title: "Software Engineer Intern",
-                            date: "Jul 2021 - Present",
-                            details: (
-                                <ul>
-                                    <li>
-                                        Developed a full stack application that performs single-variable automated
-                                        quantitative analysis, with a friendly UI aimed towards non-technologists to
-                                        easily explore relations in their datasets. Used UXPin for UI design, React for
-                                        front end development, Swagger for API design, ExpressJS for backend, and a
-                                        MySQL database
-                                    </li>
-                                    <li>
-                                        Analyzed weaknesses for MITM phishing attacks on paypal.com using Selenium,
-                                        mitmproxy, and webserver logs
-                                    </li>
-                                    <li>
-                                        Devised availability monitoring methods for SRE team's internal products through
-                                        analysis of existing collected metrics and interviewing product maintainers,
-                                        manager, as well as software engineers
-                                    </li>
-                                    <li>
-                                        Developed SignalFX availability dashboards and alaerting, reducing product
-                                        downtime and maintenance delay
-                                    </li>
-                                </ul>
-                            ),
-                        },
-                        {
-                            primary: "Byto",
-                            icon: <Image src={`byto_icon.jpg`} style={{ height: "3rem" }} />,
-                            title: "Co-Founder & Tech Lead",
-                            date: "Nov 2019 - Present",
-                            details: (
-                                <ul>
-                                    <li>
-                                        Building a social community platform that bridges employers with job seekers
-                                        interested in temporary jobs
-                                    </li>
-                                    <li>
-                                        Led and mentored a team of 10 developers to engineer a amobile app platform from
-                                        scratch to AppStore/PlayStore release using React Native & Firebase
-                                    </li>
-                                    <li>
-                                        Designed backend systems to efficiently support a social ecosystem with search,
-                                        feed, notification, chat, and more
-                                    </li>
-                                    <li>
-                                        Developed business planning and launch strategies by translating business needs
-                                        into feasible technical solutions
-                                    </li>
-                                </ul>
-                            ),
-                        },
-                        {
-                            primary: "UChicago Computer Science Instructional Laboratory",
-                            icon: <Image src={`csil.png`} style={{ height: "3rem" }} />,
-                            title: "System Administrator and Full Stack Developer",
-                            date: "Feb 2019 - Present",
-                            details: (
-                                <ul>
-                                    <li>
-                                        Conducting on site and remoate administration of 100 Mac and Ubuntu machines,
-                                        imaged with Ansible and Jenkins
-                                    </li>
-                                    <li>
-                                        Spearheaded Ubuntu backend infrastructure migration from VMs to a reverse proxy
-                                        + DOcker-based solution, implementing new Jenkins-Docker CI/CD pipelines, along
-                                        with writing new Dockerfiles for existing services
-                                    </li>
-                                    <li>
-                                        Integrated Prometheus and Grafana to monitor machine/server states, enabling
-                                        immedaite staff alerts on downtime
-                                    </li>
-                                    <li>
-                                        Developed NodeJS backend service to link Google Calendar with a JSON-based
-                                        proprietary scheduling system to allow dynamic schedule modification,
-                                        eliminating the need to manually type JSON files
-                                    </li>
-                                </ul>
-                            ),
-                        },
-                        {
-                            primary: "The University of Chicago",
-                            icon: <Image src={`uchicagocs.jpg`} style={{ height: "3rem" }} />,
-                            title: "Teaching Assistant for 20600 Introduction to Robotics",
-                            date: "Apr 2021 - Jun 2021",
-                            details: (
-                                <ul>
-                                    <li>
-                                        Led discussions on class activities and guiding students on their class projects on ROS/Gazebo on topics such as robot localization, manipulation, sensory-motor control, reinforcement learning, kinematics, and vision
-                                    </li>
-                                </ul>
-                            ),
-                        },
-                    ]}
-                />
+
+                {/* TODO: Terminal CLI to browse resume points */}
+                {/* <div style={{width: "800px", height: "500px", backgroundColor: "black", margin: "1rem auto"}}>
+                <InputGroup className="mb-3">
+                    <InputGroup.Text id="basic-addon1">></InputGroup.Text>
+                    <FormControl
+                        placeholder="Input"
+                    />
+                </InputGroup>
+                </div> */}
+
+                <div>
+                    <VerticalTimeline className="customline">
+                        {this.renderVerticalTimelineElement(
+                            "Software Engineering Intern",
+                            "PayPal",
+                            "Full Stack, React, Express, MySQL",
+                            "Jul 2021 - Present",
+                            <IoLogoPaypal/>
+                        )}
+                        {this.renderVerticalTimelineElement(
+                            "TA for Intro to Robotics",
+                            "University of Chicago",
+                            "ROS, localization, manipulation, sensory-motor control, reinforcement learning, kinematics, vision",
+                            "Mar 2021 - Jun 2021",
+                            <IoBriefcase/>
+                        )}
+                        {this.renderVerticalTimelineElement(
+                            "Site Reliability Engineering Intern",
+                            "PayPal",
+                            "Monitoring, Observability, Availability, Splunk, SignalFX",
+                            "Jun 2020 - Sep 2021",
+                            <IoLogoPaypal/>
+                        )}
+                        {this.renderVerticalTimelineElement(
+                            "Co-Founder & Tech Lead",
+                            "Byto",
+                            "Project Management, Mentorship, Leadership, React Native, Firebase",
+                            "Nov 2019 - Present",
+                            <IoBriefcase/>
+                        )}
+                        {this.renderVerticalTimelineElement(
+                            "Systems Administrator",
+                            "UChicago Computer Science Instructional Laboratory",
+                            "Docker, Jenkins, Ansible, NGINX, NodeJS, Linux, OSX",
+                            "Jan 2019 - Present",
+                            <IoBriefcase/>
+                        )}{this.renderVerticalTimelineElement(
+                            "Project Manager & Developer",
+                            "UChicago TechTeam",
+                            "Web Development, Product Management, VueJS, Firebase",
+                            "Apr 2019 - Jul 2021",
+                            <IoBriefcase/>
+                        )}
+                    </VerticalTimeline>
+                </div>
             </div>
         );
     }
