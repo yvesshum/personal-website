@@ -51,6 +51,7 @@ class Logos extends React.Component {
                         onMouseLeave={() => {
                             this.setState({ linkedInHover: false });
                         }}
+                        onClick={() => window.open("https://www.linkedin.com/in/yves-shum/", "_blank")}
                     />
 
                     <IoLogoGithub
@@ -67,6 +68,8 @@ class Logos extends React.Component {
                         onMouseLeave={() => {
                             this.setState({ gitHubHover: false });
                         }}
+                        onClick={() => window.open("https://github.com/yvesshum/", "_blank")}
+
                     />
                 </Animated>
             </div>

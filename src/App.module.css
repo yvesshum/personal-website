@@ -105,3 +105,39 @@ body {
     background: yellow;
     background-color: var(--color-dark-yellow);
 }
+
+.projectCardContainer:hover .projectCard {
+    opacity: 0.3;
+}
+
+.projectCardContainer:hover .projectCardOverlay {
+    opacity: 1;
+}
+
+.projectCard {
+    width: 20rem;
+    overflow: hidden;
+    border-radius: 10px;
+
+    opacity: 1;
+    display: block;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.projectCardContainer {
+    width: 25rem;
+}
+
+.projectCardOverlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    width: 20rem;
+    align-items: center;
+    padding-right: 10%;
+}

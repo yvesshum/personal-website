@@ -20,7 +20,6 @@ export default class Header extends Component {
                         <Nav.Link onClick={() => {scroller.scrollTo('About', scrollOpts)}} style={{mixBlendMode: "difference"}}>About</Nav.Link>
                         <Nav.Link onClick={() => {scroller.scrollTo('Resume', scrollOpts)}} style={{mixBlendMode: "difference"}}>Resume</Nav.Link>
                         <Nav.Link onClick={() => {scroller.scrollTo('Projects', scrollOpts)}} style={{mixBlendMode: "difference"}}>Projects</Nav.Link>
-                        <Nav.Link onClick={() => {scroller.scrollTo('Interests', scrollOpts)}} style={{mixBlendMode: "difference"}}>Interests</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

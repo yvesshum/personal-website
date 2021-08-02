@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import { Image } from "react-bootstrap";
 import styles from "../../App.module.css";
 import { Element } from "react-scroll";
-import Typist from "react-typist"
+import TypistLoop from "../TypistLoop";
+import Typist from "react-typist";
 
 export default class About extends Component {
     constructor(props) {
@@ -55,16 +56,38 @@ export default class About extends Component {
                         style={{ transform: `translate(${this.state.transformRight}px, 0px)` }}
                     >
                         <h1 className={` ${styles.white} ${styles.mono}`}>About me</h1>
-                        <Typist className={styles.tagline} avgTypingDelay={40}>$ Student | Full Stack | Gamer > Yves.js</Typist>
+                        <TypistLoop
+                            className={styles.tagline}
+                            avgTypingDelay={40}
+                            cursor={{
+                                show: true,
+                                blink: true,
+                                element: "|",
+                                hideWhenDone: false,
+                                hideWhenDoneDelay: 1000,
+                            }}
+                        >
+                            $ Student | Full Stack | Gamer | out > Yves.js {" "}
+                        </TypistLoop>
                         <p className={`${styles.grey} ${styles.sans}`}>
                             Hi! I'm a software engineer who likes to build things! I'm currently in my final year doing
-                            a BS/MS in Computer Science at <a href="https://www.uchicago.edu/" target="_blank" className={styles.darklink}>
+                            a BS/MS in Computer Science at{" "}
+                            <a href="https://www.uchicago.edu/" target="_blank" className={styles.darklink}>
                                 The University of Chicago
-                            </a>.
+                            </a>
+                            .
                         </p>
 
                         <p className={`${styles.grey} ${styles.sans}`}>
-                            At UChicago I've worked as a Teaching Assistant for <a className={styles.darklink} href="https://classes.cs.uchicago.edu/archive/2021/spring/20600-1/index.html" target="_blank">Intro to Robotics</a>, a Systems Administrator at the{" "}
+                            At UChicago I've worked as a Teaching Assistant for{" "}
+                            <a
+                                className={styles.darklink}
+                                href="https://classes.cs.uchicago.edu/archive/2021/spring/20600-1/index.html"
+                                target="_blank"
+                            >
+                                Intro to Robotics
+                            </a>
+                            , a Systems Administrator at the{" "}
                             <a className={styles.darklink} href="https://csil.cs.uchicago.edu" target="_blank">
                                 Computer Science Instructional Laboratory
                             </a>
@@ -76,12 +99,13 @@ export default class About extends Component {
                             <a href="https://www.byto.tech/" target="_blank" className={styles.darklink}>
                                 Byto
                             </a>{" "}
-                            (a startup co-founded with my college friends). I have also worked as a Software Engineering Intern at PayPal for two Summers.
+                            (a startup co-founded with my college friends). I have also worked as a Software Engineering
+                            Intern at PayPal for two Summers.
                         </p>
 
                         <p className={`${styles.grey} ${styles.sans}`}>
-                            Outside of work you can often find me doing Archery, attending Hackathons, or building cool and weird contraptions
-                            in video games such as{" "}
+                            Outside of work you can often find me doing Archery, attending Hackathons, or building cool
+                            and weird contraptions in video games such as{" "}
                             <a
                                 href="https://www.klei.com/games/oxygen-not-included"
                                 target="_blank"
@@ -102,7 +126,10 @@ export default class About extends Component {
                     </div>
                 </div>
 
-                <div style={{ transform: `translate(${this.state.transformRight}px, 0px)`, marginTop: "1rem" }} className={styles.split}>
+                <div
+                    style={{ transform: `translate(${this.state.transformRight}px, 0px)`, marginTop: "1rem" }}
+                    className={styles.split}
+                >
                     <div className={styles.left}>
                         <div style={{ width: "10rem" }}></div>
                     </div>
