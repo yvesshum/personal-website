@@ -7,6 +7,7 @@ import Home from "./Components/Pages/Home"
 import About from './Components/Pages/About';
 import Resume from './Components/Pages/Resume';
 import { IoLogoGithub, IoLogoLinkedin } from 'react-icons/io5';
+import Projects from './Components/Pages/Projects';
 // import Contact from './Components/Contact';
 // import Testimonials from './Components/Testimonials';
 // import Portfolio from './Components/Portfolio';
@@ -23,6 +24,7 @@ class App extends Component {
         <Home/>
         <About/>
         <Resume/>
+        <Projects/> 
         
 
         {/* <Portfolio data={this.state.resumeData.portfolio}/> */}

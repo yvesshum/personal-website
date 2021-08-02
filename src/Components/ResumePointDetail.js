@@ -10,10 +10,10 @@ export default class ResumePointDetail extends Component {
         <div style={{flex: 9}}>
           <h4>{this.props.primary}</h4>
           <p>
-            <span style={{ fontStyle: "italic" }}>{this.props.title}</span> *{" "}
+            <span style={{ fontStyle: "italic" }}>{this.props.title}</span> |{" "}
             <span>{this.props.date}</span>
           </p>
-          <p>{this.props.details}</p>
+          <span>{this.props.details}</span>
         </div>
       </div>
     );

@@ -1,76 +1,116 @@
 import React, { Component } from "react";
 import { Image } from "react-bootstrap";
-import styles from "../../App.module.css"
+import styles from "../../App.module.css";
+import { Element } from "react-scroll";
 export default class About extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      transformLeft: 0,
-      transformRight: 0
+    constructor(props) {
+        super(props);
+        this.state = {
+            transformLeft: 0,
+            transformRight: 0,
+        };
     }
-  }
 
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll)
-  }
+    componentDidMount() {
+        window.addEventListener("scroll", this.handleScroll);
+    }
 
-  handleScroll = (event) => {
-    let scrollTop = window.pageYOffset
-    console.log(window.pageYOffset, window.innerHeight)
-    let threshold = window.innerHeight / 3
-    let itemTranslateL = Math.min(0, scrollTop/2 - threshold)
-    let itemTranslateR = Math.max(0, threshold -  scrollTop/2)
-    this.setState({transformLeft: itemTranslateL, transformRight: itemTranslateR})
-  }
+    handleScroll = (event) => {
+        let scrollTop = window.pageYOffset;
+        let threshold = window.innerHeight / 3;
+        let itemTranslateL = Math.min(0, scrollTop / 2 - threshold);
+        let itemTranslateR = Math.max(0, threshold - scrollTop / 2);
+        this.setState({ transformLeft: itemTranslateL, transformRight: itemTranslateR });
+    };
 
-  render() {
-    return (
-      <div
-        style={{
-          backgroundColor: "#2b2b2b",
-          paddingLeft: "20%",
-          paddingRight: "20%",
-          paddingTop: "5rem",
-          paddingBottom: "4rem"
-        }}
-      >
-        <div
-          style={{
-            flexDirection: "row",
-            display: "flex",
-          }}
-        >
-          <div style={{ flex: 1 }}>
-            <Image
-              src="yves.png"
-              rounded
-              style={{ width: "10rem", float: "right", transform: `translate(${this.state.transformLeft}px, 0px)`}}
-            />
-          </div>
+    render() {
+        return (
+            <div
+                style={{
+                    backgroundColor: "#2b2b2b",
+                    paddingLeft: "min(20%, 2rem)",
+                    paddingRight: "min(20%, 2rem)",
+                    paddingTop: "5rem",
+                    paddingBottom: "5rem",
+                }}
+            >
+                <Element name="About" />
+                <div className={styles.split}>
+                    <div className={styles.left}>
+                        <Image
+                            src="yves.png"
+                            rounded
+                            style={{
+                                width: "10rem",
+                                transform: `translate(${this.state.transformLeft}px, 0px)`,
+                                justifySelf: "center",
+                            }}
+                        />
+                    </div>
 
-          <div style={{ flex: 2, paddingLeft: "5rem", transform: `translate(${this.state.transformRight}px, 0px)` }}>
-            <h1 className={`title ${styles.white} ${styles.mono}`}>
-              About me
-            </h1>
-            <p className={`${styles.grey} ${styles.sans}`}>
-              I'm a software engineer wekl;rjew klewjkwel jewkljlekwjkwer
-              lwewellkwewelkwrklwejr elkjrewklr ewlweklrkwe jekwlrwelk
-              rlwkejkwle klwer jkwl wklj
-            </p>
-          </div>
-        </div>
+                    <div
+                        className={styles.right}
+                        style={{ transform: `translate(${this.state.transformRight}px, 0px)` }}
+                    >
+                        <h1 className={` ${styles.white} ${styles.mono}`}>About me</h1>
+                        <p className={styles.tagline}>Student - Full Stack - Gamer</p>
+                        <p className={`${styles.grey} ${styles.sans}`}>
+                            Hi! I'm a software engineer who likes to build things! I'm currently in my final year doing
+                            a BS/MS in Computer Science at <a href="https://www.uchicago.edu/" target="_blank" className={styles.darklink}>
+                                The University of Chicago
+                            </a>.
+                        </p>
 
-        <div style={{ flexDirection: "row", display: "flex", paddingTop: "2rem", transform: `translate(${this.state.transformRight}px, 0px)`  }}>
-          <div style={{ flex: 1 }}><div></div></div>
-          <div style={{ flex: 2, paddingLeft: "5rem" }}>
-            <h1 className={`${styles.mono} ${styles.white}`}>
-              Contact
-            </h1>
-            <p className={`${styles.grey} ${styles.sans}`}>Yves Shum</p>
-            <p className={`${styles.grey} ${styles.sans}`}>yvesshum1210@gmail.com</p>
-          </div>
-        </div>
-      </div>
-    );
-  }
+                        <p className={`${styles.grey} ${styles.sans}`}>
+                            At UChicago I've worked as a Systems Administrator at the{" "}
+                            <a className={styles.darklink} href="https://csil.cs.uchicago.edu" target="_blank">
+                                Computer Science Instructional Laboratory
+                            </a>
+                            , a Project Lead at{" "}
+                            <a href="https://www.uchicagotechteam.com/" target="_blank" className={styles.darklink}>
+                                Tech Team
+                            </a>
+                            , and a Tech Lead at{" "}
+                            <a href="https://www.byto.tech/" target="_blank" className={styles.darklink}>
+                                Byto
+                            </a>{" "}
+                            (a startup co-founded with my college friends). I have also worked as a Software Engineering Intern at PayPal for two Summers.
+                        </p>
+
+                        <p className={`${styles.grey} ${styles.sans}`}>
+                            Outside of work you can often find me doing Archery, attending Hackathons, or building cool and weird contraptions
+                            in video games such as{" "}
+                            <a
+                                href="https://www.klei.com/games/oxygen-not-included"
+                                target="_blank"
+                                className={styles.darklink}
+                            >
+                                Oxygen Not Included
+                            </a>{" "}
+                            and{" "}
+                            <a
+                                href="https://store.steampowered.com/app/294100/RimWorld/"
+                                target="_blank"
+                                className={styles.darklink}
+                            >
+                                Rimworld
+                            </a>
+                            .
+                        </p>
+                    </div>
+                </div>
+
+                <div style={{ transform: `translate(${this.state.transformRight}px, 0px)` }} className={styles.split}>
+                    <div className={styles.left}>
+                        <div style={{ width: "10rem" }}></div>
+                    </div>
+                    <div className={styles.right}>
+                        <h1 className={`${styles.mono} ${styles.white}`}>Contact</h1>
+                        <p className={`${styles.grey} ${styles.sans}`}>Yves Shum</p>
+                        <p className={`${styles.grey} ${styles.sans}`}>yvesshum1210@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }

@@ -1,5 +1,17 @@
-.sans  {
-    font-family: "Noto Sans", sans-serif;;
+html,
+body {
+    width: 100%;
+    /* height: 100%; */
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+
+    --color-neutral-100: white;
+    --color-light-200: #8b8b8b;
+    --color-green-400: #34a817;
+    --color-blue-200: #00c1d4;
+    font-family: "Noto Sans", sans-serif;
+
 }
 
 .mono {
@@ -7,18 +19,74 @@
 }
 
 .white {
-    color: white
+    color: var(--color-neutral-100);
 }
 
 .grey {
-    color: #7a7a7a
+    color: var(--color-light-200);
 }
 
 .logo {
-    color: white;
+    color: var(--color-neutral-100);
 }
 
 .logo:hover {
     color: dodgerblue;
     cursor: pointer;
+}
+
+.hover:hover {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.split {
+    display: flex;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.left {
+    width: 40%;
+    text-align: right;
+    padding-right: min(5rem, 10%);
+}
+
+.right {
+    width: 60%;
+}
+
+.tagline { 
+    color: var(--color-green-400);
+    font-size: 1rem;
+}
+
+.darklink {
+    color: var(--color-blue-200);
+}
+
+.bold {
+    font-weight: bold;
+    color: red;
+}
+
+@media only screen and (max-width: 624px) {
+    .split {
+        display: block;
+    }
+
+    .left {
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+        padding-bottom: 1.5rem
+    }
+
+    .right {
+        width: 100%;
+        text-align: center;
+    }
 }
