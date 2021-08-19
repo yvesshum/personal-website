@@ -1,6 +1,6 @@
 # Yves' Personal website 👋
 
-Hi! If you're seeing this page then you've reached the repository for me personal website at https://yvesshum.com
+Hi! If you're seeing this page then you've reached the repository for my personal website at https://yvesshum.com
 
 I kind-of built this website in a hurry so my code is very messy and I'm not proud of it 😅.
 
