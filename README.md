@@ -1,8 +1,10 @@
-# Yves' Personal website
+# Yves' Personal website 👋
 
 Hi! If you're seeing this page then you've reached the repository for me personal website at https://yvesshum.com
 
-This website was built in React.
+I kind-of built this website in a hurry so my code is very messy and I'm not proud of it 😅.
+
+This website was built in React
 
 ## How to run? 
 
