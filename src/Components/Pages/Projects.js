@@ -1,12 +1,8 @@
 import React, { Component } from "react";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { Image } from "react-bootstrap";
 import { Element } from "react-scroll/modules";
 import styles from "../../App.module.css";
-        // <div className={styles.projectCardContainer}>
-        //     <img src="TechTeam.png" className={styles.projectCard} alt="TechTeam" />
-        // </div>,
 const projects = [
     {
         img: "Shellcraft.png",
