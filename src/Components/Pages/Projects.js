@@ -26,6 +26,18 @@ const projects = [
         ],
     },
     {
+        img: "PersonalWebsite.png",
+        alt: "Website screenshot",
+        title: "Personal Website",
+        details: "Interested in how this website was made with React? Check out the repo below!",
+        links: [
+            {
+                href: "https://github.com/yvesshum/personal-website",
+                text: "Git"
+            }
+        ]
+    },
+    {
         img: "Byto.png",
         alt: "Byto",
         title: "Byto",
@@ -40,6 +52,10 @@ const projects = [
                 href: "https://apps.apple.com/us/app/byto/id1533768965",
                 text: "AppStore",
             },
+            {
+                href: "https://play.google.com/store/apps/details?id=com.byto.bytoapp",
+                text: "PlayStore"
+            }
         ],
     },
     {
