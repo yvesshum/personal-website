@@ -6,7 +6,7 @@ I kind-of built this website in a hurry so my code is very messy 😅.
 
 This website was built in React
 
-![image](https://user-images.githubusercontent.com/22628937/131611222-5217b760-1d14-4ae8-ad56-2536834e7ab5.png)
+![image](https://user-images.githubusercontent.com/22628937/131611294-445c19d6-a82c-4472-bdb8-7ce0f0d14d8d.png)
 
 
 ## How to run? 
