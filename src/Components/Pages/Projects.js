@@ -136,7 +136,7 @@ export default class Projects extends Component {
         
 
         return (
-            <div style={{ padding: `5rem 5%`, backgroundColor: "#2b2b2b" }}>
+            <div style={{ padding: `5rem 5% 1.5rem 5%`, backgroundColor: "#2b2b2b" }}>
                 <Element id="Projects" />
                 <AliceCarousel
                     mouseTracking

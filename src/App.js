@@ -6,6 +6,7 @@ import Home from "./Components/Pages/Home"
 import About from './Components/Pages/About';
 import Resume from './Components/Pages/Resume';
 import Projects from './Components/Pages/Projects';
+import Contact from "./Components/Pages/Contact";
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
         <About/>
         <Resume/>
         <Projects/> 
+        <Contact/>
         
 
         {/* <Portfolio data={this.state.resumeData.portfolio}/> */}

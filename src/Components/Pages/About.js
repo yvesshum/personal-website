@@ -67,7 +67,7 @@ export default class About extends Component {
                                 hideWhenDoneDelay: 1000,
                             }}
                         >
-                            $ Student | Full Stack | Gamer | out > Yves.js {" "}
+                            $ Student | Full Stack | Gamer | out &gt; Yves.js {" "}
                         </TypistLoop>
                         <p className={`${styles.grey} ${styles.sans}`}>
                             Hi! I'm a software engineer who likes to build things! I'm currently in my final year doing
@@ -126,7 +126,7 @@ export default class About extends Component {
                     </div>
                 </div>
 
-                <div
+                {/* <div
                     style={{ transform: `translate(${this.state.transformRight}px, 0px)`, marginTop: "1rem" }}
                     className={styles.split}
                 >
@@ -138,7 +138,7 @@ export default class About extends Component {
                         <p className={`${styles.grey} ${styles.sans}`}>Yves Shum</p>
                         <p className={`${styles.grey} ${styles.sans}`}>yvesshum1210@gmail.com</p>
                     </div>
-                </div>
+                </div> */}
             </div>
         );
     }
