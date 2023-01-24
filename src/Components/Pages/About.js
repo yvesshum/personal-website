@@ -70,16 +70,15 @@ export default class About extends Component {
                             $ Student | Full Stack | Gamer | out &gt; Yves.js {" "}
                         </TypistLoop>
                         <p className={`${styles.grey} ${styles.sans}`}>
-                            Hi! I'm a software engineer who likes to build things! I'm currently in my final year doing
-                            a BS/MS in Computer Science at{" "}
-                            <a href="https://www.uchicago.edu/" target="_blank" className={styles.darklink}>
-                                The University of Chicago
+                            Hi! I'm a software engineer who likes to build things! I'm currently working as a Senior Developer at{" "}
+                            <a href="https://diffusefunds.com/" target="_blank" className={styles.darklink}>
+                                Diffuse Inc
                             </a>
                             .
                         </p>
 
                         <p className={`${styles.grey} ${styles.sans}`}>
-                            At UChicago I've worked as a Teaching Assistant for{" "}
+                            I've graduated with a M.S. and B.S. in Computer Science at UChicago, and during my time there I've worked as a Teaching Assistant for{" "}
                             <a
                                 className={styles.darklink}
                                 href="https://classes.cs.uchicago.edu/archive/2021/spring/20600-1/index.html"
@@ -87,7 +86,7 @@ export default class About extends Component {
                             >
                                 Intro to Robotics
                             </a>
-                            , a Systems Administrator at the{" "}
+                            , a Full Stack Developer at the{" "}
                             <a className={styles.darklink} href="https://csil.cs.uchicago.edu" target="_blank">
                                 Computer Science Instructional Laboratory
                             </a>

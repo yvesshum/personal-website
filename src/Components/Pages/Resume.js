@@ -1,10 +1,7 @@
 import React, { Component } from "react";
-import { FormControl, Image, InputGroup } from "react-bootstrap";
+import { IoBriefcase, IoLogoPaypal } from "react-icons/io5";
 import { Element } from "react-scroll/modules";
-import ResumePoint from "../ResumePoint";
-import { IoLogoPaypal, IoBriefcase } from "react-icons/io5";
 
-import styles from "../../App.module.css";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 export default class Resume extends Component {
@@ -29,24 +26,20 @@ export default class Resume extends Component {
         return (
             <div style={{ padding: `0 15%`, backgroundColor: "#2b2b2b" }}>
                 <Element name="Resume" />
-
-                {/* TODO: Terminal CLI to browse resume points */}
-                {/* <div style={{width: "800px", height: "500px", backgroundColor: "black", margin: "1rem auto"}}>
-                <InputGroup className="mb-3">
-                    <InputGroup.Text id="basic-addon1">></InputGroup.Text>
-                    <FormControl
-                        placeholder="Input"
-                    />
-                </InputGroup>
-                </div> */}
-
                 <div>
                     <VerticalTimeline className="customline">
+                        {this.renderVerticalTimelineElement(
+                            "Senior Developer",
+                            "Diffuse Inc",
+                            "Full Stack, TS/JS, AWS, Solidity",
+                            "Sep 2021 - Present",
+                            <IoBriefcase/>
+                        )}
                         {this.renderVerticalTimelineElement(
                             "Software Engineering Intern",
                             "PayPal",
                             "Full Stack, React, Express, MySQL",
-                            "Jul 2021 - Present",
+                            "Jul 2021 - Sep 2021",
                             <IoLogoPaypal/>
                         )}
                         {this.renderVerticalTimelineElement(
