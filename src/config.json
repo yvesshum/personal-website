@@ -1,0 +1,155 @@
+{
+    "resume": [
+        {
+            "title": "Senior Developer",
+            "company": "Diffuse Inc",
+            "description": "Full Stack, TS/JS, AWS, Solidity",
+            "dates": "Sep 2021 - Present",
+            "icon": "Briefcase"
+        },
+        {
+            "title": "Co-Founder & Tech Lead",
+            "company": "Byto",
+            "description": "Project Management, Mentorship, Leadership, React Native, Firebase",
+            "dates": "Nov 2019 - Jun 2022",
+            "icon": "Briefcase"
+        },
+        {
+            "title": "Systems Administrator & DevOps Developer",
+            "company": "UChicago Computer Science Instructional Laboratory",
+            "description": "Docker, Jenkins, Ansible, NGINX, NodeJS, Linux, OSX",
+            "dates": "Jan 2019 - Jun 2022",
+            "icon": "Briefcase"
+        },
+        {
+            "title": "Software Engineering Intern",
+            "company": "PayPal",
+            "description": "Full Stack, React, Express, MySQL",
+            "dates": "Jul 2021 - Sep 2021",
+            "icon": "LogoPaypal"
+        },
+        {
+            "title": "TA for Intro to Robotics",
+            "company": "University of Chicago",
+            "description": "ROS, localization, manipulation, sensory-motor control, reinforcement learning, kinematics, vision",
+            "dates": "Mar 2021 - Jun 2021",
+            "icon": "Briefcase"
+        },
+        {
+            "title": "Site Reliability Engineering Intern",
+            "company": "PayPal",
+            "description": "Monitoring, Observability, Availability, Splunk, SignalFX",
+            "dates": "Jun 2020 - Sep 2021",
+            "icon": "LogoPaypal"
+        },
+        {
+            "title": "Project Manager & Developer",
+            "company": "UChicago TechTeam",
+            "description": "Web Development, Product Management, VueJS, Firebase",
+            "dates": "Apr 2019 - Jul 2021",
+            "icon": "Briefcase"
+        }
+    ],
+    "projects": [
+        {
+            "img": "Shellcraft.png",
+            "alt": "Shellcraft",
+            "title": "Shellcraft",
+            "details": "Hackathon Winner! Built a minecraft-like video game to be played in a shell using Python's curses library. Includes randomized terrain generation, computer blocks, physics, explosions, and more!",
+            "links": [
+                {
+                    "href": "https://github.com/dwahme/shellcraft",
+                    "text": "Git"
+                },
+                {
+                    "href": "https://devpost.com/software/shellcraft",
+                    "text": "DevPost"
+                }
+            ]
+        },
+        {
+            "img": "PersonalWebsite.png",
+            "alt": "Website screenshot",
+            "title": "Personal Website",
+            "details": "Interested in how this website was made with React? Check out the repo below!",
+            "links": [
+                {
+                    "href": "https://github.com/yvesshum/personal-website",
+                    "text": "Git"
+                }
+            ]
+        },
+        {
+            "img": "Byto.png",
+            "alt": "Byto",
+            "title": "Byto",
+            "details": "Co-Founded a startup to connect hourly & temporary job seekers with employers. Led a team of 10 developers to build a React Native mobile app with Firebase",
+            "links": [
+                {
+                    "href": "https://byto.tech",
+                    "text": "Website"
+                },
+                {
+                    "href": "https://apps.apple.com/us/app/byto/id1533768965",
+                    "text": "AppStore"
+                },
+                {
+                    "href": "https://play.google.com/store/apps/details?id=com.byto.bytoapp",
+                    "text": "PlayStore"
+                }
+            ]
+        },
+        {
+            "img": "pacturtle.png",
+            "alt": "Pacturtle",
+            "title": "Pacturtle",
+            "details": "Built PacMan with Turtlebot Robotics. There are 4 'Ghost' turtlebots that chases the player's robot through localization, perception, and manipulation algorithms.",
+            "links": [
+                {
+                    "href": "https://github.com/jjrsoong/final_project",
+                    "text": "Git"
+                }
+            ]
+        },
+        {
+            "img": "coup.png",
+            "alt": "Coup",
+            "title": "Coup",
+            "details": "Built the Coup boardgame with Elm and React, featuring online play powered by Firebase",
+            "links": [
+                {
+                    "href": "https://github.com/yvesshum/elm-project/tree/master/part3",
+                    "text": "Git"
+                }
+            ]
+        },
+        {
+            "img": "Glim.png",
+            "alt": "Glim",
+            "title": "Glim",
+            "details": "Hackathon Winer! Built a react-native mobile app that revolutionalizes the debt repayment process through an interactive friendly mascot to make repaying debts less daunting",
+            "links": [
+                {
+                    "href": "https://github.com/PayPalHack-Chicago/Team-1",
+                    "text": "Git"
+                },
+                {
+                    "href": "https://devpost.com/software/team-1-ayn4vs",
+                    "text": "DevPost"
+                }
+            ]
+        },
+        {
+            "img": "TechTeam.png",
+            "alt": "TechTeam",
+            "title": "TechTeam",
+            "details": "Built a Vue+Firebase webapp for a non-profit organization to digitalize their youth volunteering system, featuring hour logging, order placement, blogs, statistics, and more!",
+            "links": [
+                {
+                    "href": "https://github.com/yvesshum/bikeshop-webapp",
+                    "text": "Git"
+                }
+            ]
+        }
+    ]
+}

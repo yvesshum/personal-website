@@ -3,7 +3,7 @@ import { Animated } from "react-animated-css";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import LogosTop from "./LogosTop";
 import styles from "../App.module.css";
-class Logos extends React.Component {
+class Logos extends Component {
     constructor(props) {
         super(props);
         this.state = {

@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import useWindowdimensions from "../../Hooks/useWindowDimensions";
-import Header, { scrollOpts } from "./Header";
 import { IoArrowDownCircleSharp } from "react-icons/io5";
+import { scroller } from "react-scroll";
+import { Element } from "react-scroll/modules";
 import styles from "../../App.module.css";
 import Logos from "../Logos";
-import { Element } from "react-scroll/modules";
-import { scroller } from "react-scroll";
+import { scrollOpts } from "./Header";
 
 export default class Home extends Component {
     constructor(props) {

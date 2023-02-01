@@ -3,7 +3,6 @@ import { Image } from "react-bootstrap";
 import styles from "../../App.module.css";
 import { Element } from "react-scroll";
 import TypistLoop from "../TypistLoop";
-import Typist from "react-typist";
 
 export default class About extends Component {
     constructor(props) {
@@ -71,7 +70,7 @@ export default class About extends Component {
                         </TypistLoop>
                         <p className={`${styles.grey} ${styles.sans}`}>
                             Hi! I'm a software engineer who likes to build things! I'm currently working as a Senior Developer at{" "}
-                            <a href="https://diffusefunds.com/" target="_blank" className={styles.darklink}>
+                            <a href="https://diffusefunds.com/" target="_blank" rel="noreferrer" className={styles.darklink}>
                                 Diffuse Inc
                             </a>
                             .
@@ -82,20 +81,20 @@ export default class About extends Component {
                             <a
                                 className={styles.darklink}
                                 href="https://classes.cs.uchicago.edu/archive/2021/spring/20600-1/index.html"
-                                target="_blank"
+                                target="_blank" rel="noreferrer"
                             >
                                 Intro to Robotics
                             </a>
                             , a Full Stack Developer at the{" "}
-                            <a className={styles.darklink} href="https://csil.cs.uchicago.edu" target="_blank">
+                            <a className={styles.darklink} href="https://csil.cs.uchicago.edu" target="_blank" rel="noreferrer">
                                 Computer Science Instructional Laboratory
                             </a>
                             , a Project Lead at{" "}
-                            <a href="https://www.uchicagotechteam.com/" target="_blank" className={styles.darklink}>
+                            <a href="https://www.uchicagotechteam.com/" target="_blank" rel="noreferrer" className={styles.darklink}>
                                 Tech Team
                             </a>
                             , and a Tech Lead at{" "}
-                            <a href="https://www.byto.tech/" target="_blank" className={styles.darklink}>
+                            <a href="https://www.byto.tech/" target="_blank" rel="noreferrer" className={styles.darklink}>
                                 Byto
                             </a>{" "}
                             (a startup co-founded with my college friends). I have also worked as a Software Engineering
@@ -107,7 +106,7 @@ export default class About extends Component {
                             and weird contraptions in video games such as{" "}
                             <a
                                 href="https://www.klei.com/games/oxygen-not-included"
-                                target="_blank"
+                                target="_blank" rel="noreferrer"
                                 className={styles.darklink}
                             >
                                 Oxygen Not Included
@@ -115,7 +114,7 @@ export default class About extends Component {
                             and{" "}
                             <a
                                 href="https://store.steampowered.com/app/294100/RimWorld/"
-                                target="_blank"
+                                target="_blank" rel="noreferrer"
                                 className={styles.darklink}
                             >
                                 Rimworld
@@ -124,20 +123,6 @@ export default class About extends Component {
                         </p>
                     </div>
                 </div>
-
-                {/* <div
-                    style={{ transform: `translate(${this.state.transformRight}px, 0px)`, marginTop: "1rem" }}
-                    className={styles.split}
-                >
-                    <div className={styles.left}>
-                        <div style={{ width: "10rem" }}></div>
-                    </div>
-                    <div className={styles.right}>
-                        <h1 className={`${styles.mono} ${styles.white}`}>Contact</h1>
-                        <p className={`${styles.grey} ${styles.sans}`}>Yves Shum</p>
-                        <p className={`${styles.grey} ${styles.sans}`}>yvesshum1210@gmail.com</p>
-                    </div>
-                </div> */}
             </div>
         );
     }

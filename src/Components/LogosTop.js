@@ -3,7 +3,7 @@ import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import handleViewport from "react-in-viewport";
 import styles from "../App.module.css"
 
-class LogosTop extends React.Component {
+class LogosTop extends Component {
     shouldComponentUpdate(nextProps) {        
         return (nextProps.inViewport !== this.props.inViewport)
     }
