@@ -1,8 +1,7 @@
   
 import React, { Component } from 'react';
 import './App.module.css';
-import Header from './Components/Pages/Header';
-import Home from "./Components/Pages/Home"
+import HomeHeader from './Components/Pages/HomeHeader';
 import About from './Components/Pages/About';
 import Resume from './Components/Pages/Resume';
 import Projects from './Components/Pages/Projects';
@@ -18,8 +17,7 @@ class App extends Component {
         <style>
         @import "react-alice-carousel/lib/alice-carousel.css";
         </style>
-        <Header/>
-        <Home/>
+        <HomeHeader/>
         <About/>
         <Resume/>
         <Projects/> 

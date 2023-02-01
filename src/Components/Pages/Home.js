@@ -5,8 +5,9 @@ import { Element } from "react-scroll/modules";
 import styles from "../../App.module.css";
 import Logos from "../Logos";
 import { scrollOpts } from "./Header";
+import handleViewport from "react-in-viewport";
 
-export default class Home extends Component {
+class Home extends Component {
     constructor(props) {
         super(props);
         window.addEventListener("resize", this.handleResize);
@@ -14,6 +15,15 @@ export default class Home extends Component {
             height: window.innerHeight,
             width: window.innerWidth,
         };
+        this.props.toggleHeaderBackground(!this.props.inViewport);
+    }
+
+    shouldComponentUpdate(nextProps) {
+        return nextProps.inViewport !== this.props.inViewport;
+    }
+
+    componentDidUpdate() {
+        this.props.toggleHeaderBackground(!this.props.inViewport);
     }
 
     handleResize = () => {
@@ -50,7 +60,9 @@ export default class Home extends Component {
                     }}
                 >
                     <h1 style={{ textAlign: "center", fontSize: "3.5rem", color: "white" }}>Hi, I'm Yves!</h1>
-                    <h3 className={styles.white} style={{textAlign: "center", fontSize: "2rem"}}>I'm a Full Stack Software Engineer</h3>
+                    <h3 className={styles.white} style={{ textAlign: "center", fontSize: "2rem" }}>
+                        I'm a Full Stack Software Engineer
+                    </h3>
                     <hr style={{ width: "60%", margin: "10 auto", borderColor: "white" }} />
                     <div style={{ justifyContent: "space-between", display: "flex", width: "7rem" }}>
                         <Logos />
@@ -76,3 +88,6 @@ export default class Home extends Component {
         );
     }
 }
+
+
+export default handleViewport(Home, { rootMargin: "-1.0px" });

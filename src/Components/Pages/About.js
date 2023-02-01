@@ -66,7 +66,7 @@ export default class About extends Component {
                                 hideWhenDoneDelay: 1000,
                             }}
                         >
-                            $ Student | Full Stack | Gamer | out &gt; Yves.js {" "}
+                            $ Full Stack | Gamer | out &gt; Yves.js {" "}
                         </TypistLoop>
                         <p className={`${styles.grey} ${styles.sans}`}>
                             Hi! I'm a software engineer who likes to build things! I'm currently working as a Senior Developer at{" "}
@@ -98,7 +98,11 @@ export default class About extends Component {
                                 Byto
                             </a>{" "}
                             (a startup co-founded with my college friends). I have also worked as a Software Engineering
-                            Intern at PayPal for two Summers.
+                            Intern at{" "}
+                            <a href="https://paypal.com" target="_blank" rel="noreferrer" className={styles.darklink}>
+                                PayPal
+                            </a>{" "}
+                            for two Summers.
                         </p>
 
                         <p className={`${styles.grey} ${styles.sans}`}>
