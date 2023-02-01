@@ -1,13 +1,18 @@
   
+import { logEvent } from 'firebase/analytics';
 import React, { Component } from 'react';
 import './App.module.css';
-import HomeHeader from './Components/Pages/HomeHeader';
 import About from './Components/Pages/About';
-import Resume from './Components/Pages/Resume';
-import Projects from './Components/Pages/Projects';
 import Contact from "./Components/Pages/Contact";
-
+import HomeHeader from './Components/Pages/HomeHeader';
+import Projects from './Components/Pages/Projects';
+import Resume from './Components/Pages/Resume';
+import { analytics } from './firebase';
 class App extends Component {
+  constructor(props) {
+    super(props)
+    logEvent(analytics, "Initialized")
+  }
   render() {
     return (  
       <div className="App">
@@ -22,12 +27,6 @@ class App extends Component {
         <Resume/>
         <Projects/> 
         <Contact/>
-        
-
-        {/* <Portfolio data={this.state.resumeData.portfolio}/> */}
-        {/* <Testimonials data={this.state.resumeData.testimonials}/> */}
-        {/* <Contact data={this.state.resumeData.main}/> */}
-        {/* <Footer data={this.state.resumeData.main}/> */}
       </div>
     );
   }

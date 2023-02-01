@@ -5,6 +5,8 @@ import { Element } from "react-scroll/modules";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import config from "../../config.json";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../firebase";
 
 function mapIconNameToComponent(name) {
     switch (name) {
@@ -17,9 +19,15 @@ function mapIconNameToComponent(name) {
     }
 }
 export default class Resume extends Component {
-    renderVerticalTimelineElement = (title, company, desc, date, icon) => (
+    handleTimelineElementClick = (title) => {
+        logEvent(analytics, `clicked_${title}`);
+        window.open("https://www.linkedin.com/in/yves-shum/", "_blank");
+    };
+
+    renderVerticalTimelineElement = (title, company, desc, date, icon, index) => (
         <VerticalTimelineElement
-            onTimelineElementClick={() => window.open("https://www.linkedin.com/in/yves-shum/", "_blank")}
+            key={index}
+            onTimelineElementClick={() => this.handleTimelineElementClick(title)}
             iconOnClick={() => window.open("https://www.linkedin.com/in/yves-shum/", "_blank")}
             className="vertical-timeline-element--work"
             contentStyle={{ background: "var(--color-dark-space)", color: "#fff" }}
@@ -42,15 +50,16 @@ export default class Resume extends Component {
                 <Element name="Resume" />
                 <div>
                     <VerticalTimeline className="customline">
-                        {config.resume.map(({ title, company, dates, description, icon }) =>
-                            this.renderVerticalTimelineElement(
-                                title,
-                                company,
-                                description,
-                                dates,
-                                mapIconNameToComponent(icon)
-                            )
-                        )}
+                        {config.resume.map(({ title, company, dates, description, icon }, index) => (
+                                this.renderVerticalTimelineElement(
+                                    title,
+                                    company,
+                                    description,
+                                    dates,
+                                    mapIconNameToComponent(icon),
+                                    index
+                                )
+                        ))}
                     </VerticalTimeline>
                 </div>
             </div>

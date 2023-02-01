@@ -3,6 +3,8 @@ import { Animated } from "react-animated-css";
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import LogosTop from "./LogosTop";
 import styles from "../App.module.css";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../firebase";
 class Logos extends Component {
     constructor(props) {
         super(props);
@@ -19,6 +21,11 @@ class Logos extends Component {
     toggleState(value) {
         this.setState({ isFading: value });
         setTimeout(() => this.setState({ isLogoInBottom: value }), 650);
+    }
+
+    handleLogoClicked(url) {
+        window.open(url, "_blank")
+        logEvent(analytics, `clicked_logo_${url}`)
     }
 
     render() {
@@ -51,7 +58,7 @@ class Logos extends Component {
                         onMouseLeave={() => {
                             this.setState({ linkedInHover: false });
                         }}
-                        onClick={() => window.open("https://www.linkedin.com/in/yves-shum/", "_blank")}
+                        onClick={() => this.handleLogoClicked("https://www.linkedin.com/in/yves-shum/")}
                     />
 
                     <IoLogoGithub
@@ -68,7 +75,7 @@ class Logos extends Component {
                         onMouseLeave={() => {
                             this.setState({ gitHubHover: false });
                         }}
-                        onClick={() => window.open("https://github.com/yvesshum/", "_blank")}
+                        onClick={() => this.handleLogoClicked("https://github.com/yvesshum/")}
 
                     />
                 </Animated>

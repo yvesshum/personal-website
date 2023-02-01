@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Navbar, Nav } from "react-bootstrap";
+import { Nav, Navbar } from "react-bootstrap";
 import { scroller } from "react-scroll";
-import styles from "../../App.module.css";
 
 export const scrollOpts = {
     smooth: true,
@@ -10,9 +9,6 @@ export const scrollOpts = {
 };
 
 export default class Header extends Component {
-    constructor(props) {
-        super(props);
-    }
     render() {
         return (
             <div style={{ position: "relative", justifySelf: "center" }}>
