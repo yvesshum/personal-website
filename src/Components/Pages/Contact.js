@@ -1,8 +1,16 @@
 import React, { Component } from "react";
 import styles from "../../App.module.css";
 import { Element } from "react-scroll";
+import { logEvent } from "firebase/analytics";
+import { analytics } from "../../firebase";
 
 export default class Contact extends Component {
+    onResumeClick(e) {
+        e.preventDefault()
+        logEvent(analytics, "click_resume")
+        window.open("https://drive.google.com/drive/folders/1e9SAfcFpb3ZFQZ3so2fx4ONX5k-QsPyD?usp=share_link", "_blank")
+    }
+
     render() {
         return (
             <div
@@ -35,6 +43,7 @@ export default class Contact extends Component {
                             <a
                                 href="https://drive.google.com/drive/folders/1e9SAfcFpb3ZFQZ3so2fx4ONX5k-QsPyD?usp=share_link"
                                 target="_blank" rel="noreferrer"
+                                onClick={this.onResumeClick}
                                 style={{ color: "var(--color-blue-200)" }}
                             >
                                 resume
